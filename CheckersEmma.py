@@ -8,10 +8,19 @@ class Checkers(tk.Frame):
         self.create_widgets()
 
     def create_widgets(self):
+        # heyyyyyy gang so mr. respass told me  to work on figuring out how to get
+        # an image onto a button. i worked on it all hour but, like a fool, i can't figure it out. This is the code he
+        # recommended,,,, didn't really work but it was the best I could get. sorry
+        # he also mentioned that we should work on compiling this whole thing into a for loop so we don't have to
+        # hard code every tiny thing
+        # btw - I KNOW THE CODE I DID IS A FAILURE. I REALLY DID TRY THOUGH AND AT LEAST IT'S NOT AN ERROR MESSAGE
         red_sqr = 'red4'
         black_sqr = 'black'
         self.a1 = tk.Button(self, width=4, height=2, background=red_sqr).grid(row=0, column=0, sticky=tk.W)
-        self.a2 = tk.Button(self, width=4, height=2, background=black_sqr).grid(row=0, column=1, sticky=tk.W)
+        picture = tk.PhotoImage(file="Red_Circle.png")
+        self.a2 = tk.Label(self, image=picture, width=4, height=2, background=black_sqr)
+        self.a2.photo = picture
+        self.a2.grid(row=0, column=1, sticky=tk.W)
         self.a3 = tk.Button(self, width=4, height=2, background=red_sqr).grid(row=0, column=2, sticky=tk.W)
         self.a4 = tk.Button(self, width=4, height=2, background=black_sqr).grid(row=0, column=3, sticky=tk.W)
         self.a5 = tk.Button(self, width=4, height=2, background=red_sqr).grid(row=0, column=4, sticky=tk.W)
