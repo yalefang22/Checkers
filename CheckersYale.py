@@ -10,11 +10,10 @@ class Checkers(tk.Frame):
     def create_widgets(self):
         red_sqr = 'red4'
         black_sqr = 'black'
-        self.loadimage = tk.PhotoImage(file="rounded_button.png")
-        self.roundedbutton = tk.Button(self, image=self.loadimage)
+        self.loadimage = tk.PhotoImage(file="redcircle.png")
+        self.roundedbutton = tk.Button(self, image=self.loadimage).grid(row=0, column=10, sticky=tk.W)
         self.roundedbutton["bg"] = "red4"
         self.roundedbutton["border"] = "0"
-        self.roundedbutton.grid(side="top")
 
         self.a1 = tk.Button(self, width=4, height=2, background=red_sqr).grid(row=0, column=0, sticky=tk.W)
         self.a2 = tk.Button(self, width=4, height=2, background=black_sqr).grid(row=0, column=1, sticky=tk.W)
