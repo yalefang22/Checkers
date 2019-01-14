@@ -45,6 +45,8 @@ class Checkers(tk.Frame):
 
             column += 1
 
+    def
+
 
 
 root = tk.Tk()
