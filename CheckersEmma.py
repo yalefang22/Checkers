@@ -9,7 +9,6 @@ class Checkers(tk.Frame):
         self.start = ""
         self.to = ""
 
-
     def handleClick(self, event):
         if self.start == "":
             self.start = event.widget
