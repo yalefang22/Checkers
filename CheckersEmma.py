@@ -93,8 +93,6 @@ class Checkers(tk.Frame):
         self.h8 = tk.Button(self, width=4, height=2, background=red_sqr, command=self.handleClick).grid(row=7, column=7, sticky=tk.W)
 
 
-
-
 root = tk.Tk()
 root.title("Mad Libs")
 root.geometry("600x400")
