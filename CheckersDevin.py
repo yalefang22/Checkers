@@ -47,7 +47,7 @@ class Checkers(tk.Frame):
 
 
 root = tk.Tk()
-root.title("Mad Libs")
+root.title("Checkers")
 root.geometry("600x400")
 app = Checkers(root)
 root.mainloop()
