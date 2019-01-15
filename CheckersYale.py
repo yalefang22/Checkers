@@ -54,10 +54,10 @@ class Checkers(tk.Frame):
         self.c7 = tk.Button(self, width=4, height=2, background=self.red_sqr).grid(row=2, column=6, sticky=tk.W)
         self.c8 = tk.Button(self, image=self.redpiece, width=32, height=35, background=self.black_sqr)
         self.c8.grid(row=2, column=7, sticky=tk.W)
-        self.d1 = tk.Button(self, width=4, height=2, background=self.black_sqr)
+        self.d1 = tk.Button(self, width=32, height=35, background=self.black_sqr, image=self.transparent)
         self.d1.grid(row=3, column=0, sticky=tk.W)
         self.d2 = tk.Button(self, width=4, height=2, background=self.red_sqr).grid(row=3, column=1, sticky=tk.W)
-        self.d3 = tk.Button(self, width=4, height=2, background=self.black_sqr)
+        self.d3 = tk.Button(self, width=32, height=35, background=self.black_sqr, image=self.transparent)
         self.d3.grid(row=3, column=2, sticky=tk.W)
         self.d4 = tk.Button(self, width=4, height=2, background=self.red_sqr).grid(row=3, column=3, sticky=tk.W)
         self.d5 = tk.Button(self, width=4, height=2, background=self.black_sqr)
@@ -116,28 +116,19 @@ class Checkers(tk.Frame):
         self.h8 = tk.Button(self, width=4, height=2, background=self.red_sqr).grid(row=7, column=7, sticky=tk.W)
 
     def movec2(self):
-        if not self.check:
-            if self.c2['image'] == self.redpiece:
-                self.c2.configure(image=self.transparent)
-                self.piece = 'red'
-            elif self.c2['image'] == self.blackpiece:
-                self.c2.configure(image=self.transparent)
-                self.piece = 'black'
-            self.check = True
-        elif self.check:
-            if self.piece == 'red':
-                self.c2.configure(image=self.redpiece)
-            elif self.piece == 'black':
-                self.c2.configure(image=self.blackpiece)
-            self.piece = ''
-            self.check = False
+        if self.c2['image'] == 'pyimage1':
+            self.c2.configure(image=self.transparent)
+            self.piece = 'red'
+        elif self.c2['image'] == 'pyimage2':
+            self.c2.configure(image=self.transparent)
+            self.piece = 'black'
 
     def movec4(self):
         if not self.check:
-            if self.c4['image'] == self.redpiece:
+            if self.c4['image'] == 'pyimage1':
                 self.c4.configure(image=self.transparent)
                 self.piece = 'red'
-            elif self.c4['image'] == self.blackpiece:
+            elif self.c4['image'] == 'pyimage2':
                 self.c4.configure(image=self.transparent)
                 self.piece = 'black'
             self.check = True
