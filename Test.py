@@ -1,22 +1,24 @@
-import tkinter as tk
+from tkinter import *
 
 
-class Checkers(tk.Frame):
+class Checkers(Frame):
     def __init__(self, master):
         super().__init__(master)
         self.grid()
         self.create_widgets()
 
     def create_widgets(self):
-        self.button = tk.Button(self, width=32, height=35, background='black', command=self.movebutton
-        ()).grid(row=2, column=1, sticky=tk.W)
+        self.button = Button(self, width=4, height=2, bg='black', command=self.movebutton)
+        self.button.grid(row=0, column=0, sticky=W)
 
     def movebutton(self):
         if self.button['bg'] == 'black':
-            self.button = tk.Button(self, width=4, height=2, background='red4').grid(row=2, column=1, sticky=tk.W)
+            self.button.configure(bg='red4')
+        elif self.button['bg'] == 'red4':
+            self.button.configure(bg='black')
 
 
-root = tk.Tk()
+root = Tk()
 root.title("Checkers")
 root.geometry("600x400")
 app = Checkers(root)
