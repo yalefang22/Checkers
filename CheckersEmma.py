@@ -6,8 +6,6 @@ class Checkers(tk.Frame):
         super().__init__(master)
         self.grid()
         self.create_widgets()
-        self.start = ""
-        self.to = ""
 
     def handleClick(self, event):
         if self.start == "":
