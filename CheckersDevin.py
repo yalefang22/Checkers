@@ -7,6 +7,14 @@ class Checkers(tk.Frame):
         self.grid()
         self.create_widgets()
 
+    def handle_click(self, event):
+        if self.start == "":
+            self.start = event.widget
+        else:
+            self.to = event.widget
+            self.to.image = self.start.image
+            self.start.image = ""
+
     def create_widgets(self):
         red_sqr = 'red4'
         black_sqr = 'black'
@@ -25,30 +33,37 @@ class Checkers(tk.Frame):
 
             if i < 24:
                 if ((column % 2 == 0) and (row % 2 == 0)) or ((column % 2 != 0) and (row % 2 != 0)):
-                    tk.Button(self, width=4, height=2, background=red_sqr).grid(row=row, column=column, sticky=tk.W)
+                    tk.Button(self, width=4, height=2, background=red_sqr,
+                              command=self.handle_click
+                              ).grid(row=row, column=column, sticky=tk.W)
                 else:
-                    tk.Button(self, image=self.loadimage, width=32, height=35, background=black_sqr).grid(row=row,
-                                                                                                          column=column,
-                                                                                                          sticky=tk.W)
-            elif i >= 24 and i < 40:
+                    tk.Button(self, image=self.loadimage, width=32, height=35, background=black_sqr,
+                              command=self.handle_click
+                              ).grid(row=row, column=column, sticky=tk.W)
+            elif 24 <= i < 40:
                 if ((column % 2 == 0) and (row % 2 == 0)) or ((column % 2 != 0) and (row % 2 != 0)):
-                    tk.Button(self, width=4, height=2, background=red_sqr).grid(row=row, column=column, sticky=tk.W)
+                    tk.Button(self, width=4, height=2, background=red_sqr,
+                              command=self.handle_click
+                              ).grid(row=row, column=column, sticky=tk.W)
                 else:
-                    tk.Button(self, width=4, height=2, background=black_sqr).grid(row=row, column=column, sticky=tk.W)
+                    tk.Button(self, width=4, height=2, background=black_sqr,
+                              command=self.handle_click
+                              ).grid(row=row, column=column, sticky=tk.W)
             else:
                 if ((column % 2 == 0) and (row % 2 == 0)) or ((column % 2 != 0) and (row % 2 != 0)):
-                    tk.Button(self, width=4, height=2, background=red_sqr).grid(row=row, column=column, sticky=tk.W)
+                    tk.Button(self, width=4, height=2, background=red_sqr,
+                              command=self.handle_click
+                              ).grid(row=row, column=column, sticky=tk.W)
                 else:
-                    tk.Button(self, image=self.loadimage2, width=32, height=35, background=black_sqr).grid(row=row,
-                                                                                                          column=column,
-                                                                                                          sticky=tk.W)
+                    tk.Button(self, image=self.loadimage2, width=32, height=35, background=black_sqr,
+                              command=self.handle_click
+                              ).grid(row=row, column=column, sticky=tk.W)
 
             column += 1
 
 
-
 root = tk.Tk()
-root.title("Mad Libs")
+root.title("Checkers")
 root.geometry("600x400")
 app = Checkers(root)
 root.mainloop()
