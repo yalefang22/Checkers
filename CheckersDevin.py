@@ -15,8 +15,7 @@ class Checkers(tk.Frame):
         self.transparent = tk.PhotoImage(file='transparent.png')
         self.check = False
         self.piece = ""
-
-        isking = False
+        self.isking = False
 
         self.ablea2 = False
         self.ablea4 = False
@@ -167,7 +166,10 @@ class Checkers(tk.Frame):
                 self.a2.configure(image=self.transparent)
                 self.piece = 'black'
             self.check = True
-        elif self.check:
+            self.ablea2 = True
+            self.ableb1 = True
+            self.ableb3 = True
+        elif self.check and self.ablea2:
             if self.piece == 'red':
                 self.a4.configure(image=self.redpiece)
             elif self.piece == 'black':
@@ -183,7 +185,10 @@ class Checkers(tk.Frame):
                 self.a4.configure(image=self.transparent)
                 self.piece = 'black'
             self.check = True
-        elif self.check:
+            self.ablea4 = True
+            self.ableb3 = True
+            self.ableb5 = True
+        elif self.check and self.ablea4:
             if self.piece == 'red':
                 self.a4.configure(image=self.redpiece)
             elif self.piece == 'black':
@@ -199,13 +204,16 @@ class Checkers(tk.Frame):
                 self.a6.configure(image=self.transparent)
                 self.piece = 'black'
             self.check = True
-        elif self.check:
+        elif self.check and self.ablea6:
             if self.piece == 'red':
                 self.a6.configure(image=self.redpiece)
             elif self.piece == 'black':
                 self.a6.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.ablea2 = True
+            self.ableb1 = True
+            self.ableb3 = True
     def movea8(self):
         if not self.check:
             if self.a8['image'] == 'pyimage1':
