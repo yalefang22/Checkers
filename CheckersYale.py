@@ -17,6 +17,48 @@ class Checkers(tk.Frame):
         self.check = False
         self.piece = ""
 
+        self.isking = False
+
+        self.ablea2 = False
+        self.ablea4 = False
+        self.ablea6 = False
+        self.ablea8 = False
+
+        self.ableb1 = False
+        self.ableb3 = False
+        self.ableb5 = False
+        self.ableb7 = False
+
+        self.ablec2 = False
+        self.ablec4 = False
+        self.ablec6 = False
+        self.ablec8 = False
+
+        self.abled1 = False
+        self.abled3 = False
+        self.abled5 = False
+        self.abled7 = False
+
+        self.ablee2 = False
+        self.ablee4 = False
+        self.ablee6 = False
+        self.ablee8 = False
+
+        self.ablef1 = False
+        self.ablef3 = False
+        self.ablef5 = False
+        self.ablef7 = False
+
+        self.ableg2 = False
+        self.ableg4 = False
+        self.ableg6 = False
+        self.ableg8 = False
+
+        self.ableh1 = False
+        self.ableh3 = False
+        self.ableh5 = False
+        self.ableh7 = False
+
         self.a1 = tk.Button(self, width=4, height=2, background=self.red_sqr).grid(row=0, column=0, sticky=tk.W)
         self.a2 = tk.Button(self, image=self.redpiece, width=32, height=35, background=self.black_sqr)
         self.a2.grid(row=0, column=1, sticky=tk.W)
@@ -137,6 +179,7 @@ class Checkers(tk.Frame):
                     self.b3.configure(image=self.transparent)
             self.piece = ''
             self.check = False
+            self.clear()
 
     def movea4(self):
         if not self.check:
@@ -158,6 +201,7 @@ class Checkers(tk.Frame):
                     self.b3.configure(image=self.transparent)
             self.piece = ''
             self.check = False
+            self.clear()
 
     def movea6(self):
         if not self.check:
@@ -179,6 +223,7 @@ class Checkers(tk.Frame):
                     self.b7.configure(image=self.transparent)
             self.piece = ''
             self.check = False
+            self.clear()
 
     def movea8(self):
         if not self.check:
@@ -198,6 +243,7 @@ class Checkers(tk.Frame):
                     self.b7.configure(image=self.transparent)
             self.piece = ''
             self.check = False
+            self.clear()
 
     def moveb1(self):
         if not self.check:
@@ -215,6 +261,8 @@ class Checkers(tk.Frame):
                 self.b1.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def moveb3(self):
         if not self.check:
             if self.b3['image'] == 'pyimage1':
@@ -231,6 +279,9 @@ class Checkers(tk.Frame):
                 self.b3.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
+
     def moveb5(self):
         if not self.check:
             if self.b5['image'] == 'pyimage1':
@@ -247,6 +298,8 @@ class Checkers(tk.Frame):
                 self.b5.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def moveb7(self):
         if not self.check:
             if self.b7['image'] == 'pyimage1':
@@ -263,6 +316,8 @@ class Checkers(tk.Frame):
                 self.b7.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def movec2(self):
         if not self.check:
             if self.c2['image'] == 'pyimage1':
@@ -279,6 +334,8 @@ class Checkers(tk.Frame):
                 self.c2.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def movec4(self):
         if not self.check:
             if self.c4['image'] == 'pyimage1':
@@ -295,6 +352,8 @@ class Checkers(tk.Frame):
                 self.c4.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def movec6(self):
         if not self.check:
             if self.c6['image'] == 'pyimage1':
@@ -311,6 +370,8 @@ class Checkers(tk.Frame):
                 self.c6.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def movec8(self):
         if not self.check:
             if self.c8['image'] == 'pyimage1':
@@ -327,6 +388,8 @@ class Checkers(tk.Frame):
                 self.c8.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def moved1(self):
         if not self.check:
             if self.d1['image'] == 'pyimage1':
@@ -343,6 +406,8 @@ class Checkers(tk.Frame):
                 self.d1.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def moved3(self):
         if not self.check:
             if self.d3['image'] == 'pyimage1':
@@ -355,10 +420,20 @@ class Checkers(tk.Frame):
         elif self.check:
             if self.piece == 'red':
                 self.d3.configure(image=self.redpiece)
+                if self.c2['image'] == 'pyimage4':
+                    self.c2.configure(image=self.transparent)
+                elif self.c4['image'] == 'pyimage4':
+                    self.c4.configure(image=self.transparent)
             elif self.piece == 'black':
                 self.d3.configure(image=self.blackpiece)
+                if self.f2['image'] == 'pyimage4':
+                    self.f2.configure(image=self.transparent)
+                elif self.f4['image'] == 'pyimage4':
+                    self.f4.configure(image=self.transparent)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def moved5(self):
         if not self.check:
             if self.d5['image'] == 'pyimage1':
@@ -375,6 +450,8 @@ class Checkers(tk.Frame):
                 self.d5.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def moved7(self):
         if not self.check:
             if self.d7['image'] == 'pyimage1':
@@ -391,6 +468,8 @@ class Checkers(tk.Frame):
                 self.d7.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def movee2(self):
         if not self.check:
             if self.e2['image'] == 'pyimage1':
@@ -407,6 +486,8 @@ class Checkers(tk.Frame):
                 self.e2.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def movee4(self):
         if not self.check:
             if self.e4['image'] == 'pyimage1':
@@ -423,6 +504,8 @@ class Checkers(tk.Frame):
                 self.e4.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def movee6(self):
         if not self.check:
             if self.e6['image'] == 'pyimage1':
@@ -439,6 +522,8 @@ class Checkers(tk.Frame):
                 self.e6.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def movee8(self):
         if not self.check:
             if self.e8['image'] == 'pyimage1':
@@ -455,6 +540,8 @@ class Checkers(tk.Frame):
                 self.e8.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def movef1(self):
         if not self.check:
             if self.f1['image'] == 'pyimage1':
@@ -471,6 +558,8 @@ class Checkers(tk.Frame):
                 self.f1.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def movef3(self):
         if not self.check:
             if self.f3['image'] == 'pyimage1':
@@ -487,6 +576,8 @@ class Checkers(tk.Frame):
                 self.f3.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def movef5(self):
         if not self.check:
             if self.f5['image'] == 'pyimage1':
@@ -648,6 +739,47 @@ class Checkers(tk.Frame):
                 self.h7.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+
+    def clear(self):
+        self.ablea2 = False
+        self.ablea4 = False
+        self.ablea6 = False
+        self.ablea8 = False
+
+        self.ableb1 = False
+        self.ableb3 = False
+        self.ableb5 = False
+        self.ableb7 = False
+
+        self.ablec2 = False
+        self.ablec4 = False
+        self.ablec6 = False
+        self.ablec8 = False
+
+        self.abled1 = False
+        self.abled3 = False
+        self.abled5 = False
+        self.abled7 = False
+
+        self.ablee2 = False
+        self.ablee4 = False
+        self.ablee6 = False
+        self.ablee8 = False
+
+        self.ablef1 = False
+        self.ablef3 = False
+        self.ablef5 = False
+        self.ablef7 = False
+
+        self.ableg2 = False
+        self.ableg4 = False
+        self.ableg6 = False
+        self.ableg8 = False
+
+        self.ableh1 = False
+        self.ableh3 = False
+        self.ableh5 = False
+        self.ableh7 = False
 
 root = tk.Tk()
 root.title("Checkers")
