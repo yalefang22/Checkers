@@ -10,7 +10,7 @@ class Checkers(Frame):
     def create_widgets(self):
         self.loadimage = PhotoImage(file="Red_Circle.png")
         self.loadimage2 = PhotoImage(file="GreyCircle.png")
-        self.button = Button(self, width=32, height=35, bg='red4', command=self.movebutton, image=self.loadimage)
+        self.button = Button(self, width=32, height=35, bg='black', command=self.movebutton, image=self.loadimage)
         self.button.grid(row=0, column=0, sticky=W)
         # self.button2 = Button(self, width=32, height=35, bg='red')
         # self.button2.grid(row=0, column=1, sticky=W)
@@ -18,7 +18,7 @@ class Checkers(Frame):
     def movebutton(self):
         if self.button['bg'] == 'black':
             self.button.configure(bg='red4')
-            # sets the image to none so that it disappears!
+            # sets the image to none
             self.loadimage = PhotoImage(None)
             self.button.configure(image=self.loadimage)
         elif self.button['bg'] == 'red4':
