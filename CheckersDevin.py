@@ -15,7 +15,7 @@ class Checkers(tk.Frame):
         self.transparent = tk.PhotoImage(file='transparent.png')
         self.check = False
         self.piece = ""
-        self.isking = True
+        self.isking = False
 
         self.ablea2 = False
         self.ablea4 = False
