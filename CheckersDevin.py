@@ -317,10 +317,10 @@ class Checkers(tk.Frame):
             self.clear()
 
         def movec2(self):
-        if not self.check:
-            if self.c2['image'] == 'pyimage1':
-                self.c2.configure(image=self.purplepiece)
-                self.piece = 'red'
+            if not self.check:
+                if self.c2['image'] == 'pyimage1':
+                    self.c2.configure(image=self.purplepiece)
+                    self.piece = 'red'
             elif self.c2['image'] == 'pyimage2':
                 self.c2.configure(image=self.purplepiece)
                 self.piece = 'black'
