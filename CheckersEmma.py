@@ -172,6 +172,7 @@ class Checkers(tk.Frame):
             if self.piece == 'red':
                 self.a2.configure(image=self.redpiece)
             elif self.piece == 'black':
+                self.isking = True
                 self.a2.configure(image=self.blackpiece)
                 if self.b1['image'] == 'pyimage4':
                     self.b1.configure(image=self.transparent)
@@ -194,6 +195,7 @@ class Checkers(tk.Frame):
             if self.piece == 'red':
                 self.a4.configure(image=self.redpiece)
             elif self.piece == 'black':
+                self.isking = True
                 self.a4.configure(image=self.blackpiece)
                 if self.b5['image'] == 'pyimage4':
                     self.b5.configure(image=self.transparent)
@@ -216,6 +218,7 @@ class Checkers(tk.Frame):
             if self.piece == 'red':
                 self.a6.configure(image=self.redpiece)
             elif self.piece == 'black':
+                self.isking = True
                 self.a6.configure(image=self.blackpiece)
                 if self.b5['image'] == 'pyimage4':
                     self.b5.configure(image=self.transparent)
@@ -238,6 +241,7 @@ class Checkers(tk.Frame):
             if self.piece == 'red':
                 self.a8.configure(image=self.redpiece)
             elif self.piece == 'black':
+                self.isking = True
                 self.a8.configure(image=self.blackpiece)
                 if self.b7['image'] == 'pyimage4':
                     self.b7.configure(image=self.transparent)
@@ -687,6 +691,7 @@ class Checkers(tk.Frame):
         elif self.check:
             if self.piece == 'red':
                 self.h1.configure(image=self.redpiece)
+                self.isking = True
             elif self.piece == 'black':
                 self.h1.configure(image=self.blackpiece)
             self.piece = ''
@@ -703,6 +708,7 @@ class Checkers(tk.Frame):
         elif self.check:
             if self.piece == 'red':
                 self.h3.configure(image=self.redpiece)
+                self.isking = True
             elif self.piece == 'black':
                 self.h3.configure(image=self.blackpiece)
             self.piece = ''
@@ -719,6 +725,7 @@ class Checkers(tk.Frame):
         elif self.check:
             if self.piece == 'red':
                 self.h5.configure(image=self.redpiece)
+                self.isking = True
             elif self.piece == 'black':
                 self.h5.configure(image=self.blackpiece)
             self.piece = ''
@@ -735,6 +742,7 @@ class Checkers(tk.Frame):
         elif self.check:
             if self.piece == 'red':
                 self.h7.configure(image=self.redpiece)
+                self.isking = True
             elif self.piece == 'black':
                 self.h7.configure(image=self.blackpiece)
             self.piece = ''
