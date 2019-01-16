@@ -76,7 +76,7 @@ class Checkers(tk.Frame):
         self.e6 = tk.Button(self, image=self.transparent, width=32, height=35, background=self.black_sqr, command=self.movee6)
         self.e6.grid(row=4, column=5, sticky=tk.W)
         self.e7 = tk.Button(self, width=4, height=2, background=self.red_sqr).grid(row=4, column=6, sticky=tk.W)
-        self.e8 = tk.Button(self, image=self.transparent, width=32, height=35, background=self.black_sqr, command=self.movee7)
+        self.e8 = tk.Button(self, image=self.transparent, width=32, height=35, background=self.black_sqr, command=self.movee8)
         self.e8.grid(row=4, column=7, sticky=tk.W)
         self.f1 = tk.Button(self, image=self.transparent, width=32, height=35, background=self.black_sqr, command=self.movef1)
         self.f1.grid(row=5, column=0, sticky=tk.W)
@@ -105,66 +105,17 @@ class Checkers(tk.Frame):
         self.h1 = tk.Button(self, image=self.transparent, width=32, height=35, background=self.black_sqr, command=self.moveh1)
         self.h1.grid(row=7, column=0, sticky=tk.W)
         self.h2 = tk.Button(self, width=4, height=2, background=self.red_sqr).grid(row=7, column=1, sticky=tk.W)
-        self.h3 = tk.Button(self, image=self.transparent, width=32, height=35, background=self.black_sqr)
+        self.h3 = tk.Button(self, image=self.transparent, width=32, height=35, background=self.black_sqr, command=self.moveh3)
         self.h3.grid(row=7, column=2, sticky=tk.W)
         self.h4 = tk.Button(self, width=4, height=2, background=self.red_sqr).grid(row=7, column=3, sticky=tk.W)
-        self.h5 = tk.Button(self, image=self.transparent, width=32, height=35, background=self.black_sqr)
+        self.h5 = tk.Button(self, image=self.transparent, width=32, height=35, background=self.black_sqr, command=self.moveh5)
         self.h5.grid(row=7, column=4, sticky=tk.W)
         self.h6 = tk.Button(self, width=4, height=2, background=self.red_sqr).grid(row=7, column=5, sticky=tk.W)
-        self.h7 = tk.Button(self, image=self.transparent, width=32, height=35, background=self.black_sqr)
+        self.h7 = tk.Button(self, image=self.transparent, width=32, height=35, background=self.black_sqr, command=self.moveh7)
         self.h7.grid(row=7, column=6, sticky=tk.W)
         self.h8 = tk.Button(self, width=4, height=2, background=self.red_sqr).grid(row=7, column=7, sticky=tk.W)
 
-    def movec2(self):
-        if not self.check:
-            if self.c2['image'] == 'pyimage1':
-                self.c2.configure(image=self.transparent)
-                self.piece = 'red'
-            elif self.c2['image'] == 'pyimage2':
-                self.c2.configure(image=self.transparent)
-                self.piece = 'black'
-            self.check = True
-        elif self.check:
-            if self.piece == 'red':
-                self.c2.configure(image=self.redpiece)
-            elif self.piece == 'black':
-                self.c2.configure(image=self.blackpiece)
-            self.piece = ''
-            self.check = False
 
-    def moved1(self):
-        if not self.check:
-            if self.d1['image'] == 'pyimage1':
-                self.d1.configure(image=self.transparent)
-                self.piece = 'red'
-            elif self.d1['image'] == 'pyimage2':
-                self.d1.configure(image=self.transparent)
-                self.piece = 'black'
-            self.check = True
-        elif self.check:
-            if self.piece == 'red':
-                self.d1.configure(image=self.redpiece)
-            elif self.piece == 'black':
-                self.d1.configure(image=self.blackpiece)
-            self.piece = ''
-            self.check = False
-
-    def movee2(self):
-        if not self.check:
-            if self.e2['image'] == 'pyimage1':
-                self.e2.configure(image=self.transparent)
-                self.piece = 'red'
-            elif self.e2['image'] == 'pyimage2':
-                self.e2.configure(image=self.transparent)
-                self.piece = 'black'
-            self.check = True
-        elif self.check:
-            if self.piece == 'red':
-                self.e2.configure(image=self.redpiece)
-            elif self.piece == 'black':
-                self.e2.configure(image=self.blackpiece)
-            self.piece = ''
-            self.check = False
 
     def movea4(self):
         if not self.check:
@@ -196,6 +147,471 @@ class Checkers(tk.Frame):
                 self.a6.configure(image=self.redpiece)
             elif self.piece == 'black':
                 self.a6.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def movea8(self):
+        if not self.check:
+            if self.a8['image'] == 'pyimage1':
+                self.a8.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.a8['image'] == 'pyimage2':
+                self.a8.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.a8.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.a8.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moveb1(self):
+        if not self.check:
+            if self.b1['image'] == 'pyimage1':
+                self.b1.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.b1['image'] == 'pyimage2':
+                self.b1.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.b1.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.b1.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moveb3(self):
+        if not self.check:
+            if self.b3['image'] == 'pyimage1':
+                self.b3.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.b3['image'] == 'pyimage2':
+                self.b3.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.b3.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.b3.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moveb5(self):
+        if not self.check:
+            if self.b5['image'] == 'pyimage1':
+                self.b5.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.b5['image'] == 'pyimage2':
+                self.b5.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.b5.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.b5.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moveb7(self):
+        if not self.check:
+            if self.b7['image'] == 'pyimage1':
+                self.b7.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.b7['image'] == 'pyimage2':
+                self.b7.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.b7.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.b7.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def movec2(self):
+        if not self.check:
+            if self.c2['image'] == 'pyimage1':
+                self.c2.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.c2['image'] == 'pyimage2':
+                self.c2.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.c2.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.c2.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def movec4(self):
+        if not self.check:
+            if self.c4['image'] == 'pyimage1':
+                self.c4.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.c4['image'] == 'pyimage2':
+                self.c4.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.c4.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.c4.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def movec6(self):
+        if not self.check:
+            if self.c6['image'] == 'pyimage1':
+                self.c6.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.c6['image'] == 'pyimage2':
+                self.c6.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.c6.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.c6.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def movec8(self):
+        if not self.check:
+            if self.c8['image'] == 'pyimage1':
+                self.c8.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.c8['image'] == 'pyimage2':
+                self.c8.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.c8.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.c8.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moved1(self):
+        if not self.check:
+            if self.d1['image'] == 'pyimage1':
+                self.d1.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.d1['image'] == 'pyimage2':
+                self.d1.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.d1.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.d1.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moved3(self):
+        if not self.check:
+            if self.d3['image'] == 'pyimage1':
+                self.d3.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.d3['image'] == 'pyimage2':
+                self.d3.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.d3.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.d3.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moved5(self):
+        if not self.check:
+            if self.d5['image'] == 'pyimage1':
+                self.d5.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.d5['image'] == 'pyimage2':
+                self.d5.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.d5.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.d5.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moved7(self):
+        if not self.check:
+            if self.d7['image'] == 'pyimage1':
+                self.d7.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.d7['image'] == 'pyimage2':
+                self.d7.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.d7.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.d7.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def movee2(self):
+        if not self.check:
+            if self.e2['image'] == 'pyimage1':
+                self.e2.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.e2['image'] == 'pyimage2':
+                self.e2.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.e2.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.e2.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def movee4(self):
+        if not self.check:
+            if self.e4['image'] == 'pyimage1':
+                self.e4.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.e4['image'] == 'pyimage2':
+                self.e4.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.e4.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.e4.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def movee6(self):
+        if not self.check:
+            if self.e6['image'] == 'pyimage1':
+                self.e6.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.e6['image'] == 'pyimage2':
+                self.e6.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.e6.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.e6.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def movee8(self):
+        if not self.check:
+            if self.e8['image'] == 'pyimage1':
+                self.e8.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.e8['image'] == 'pyimage2':
+                self.e8.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.e8.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.e8.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def movef1(self):
+        if not self.check:
+            if self.f1['image'] == 'pyimage1':
+                self.f1.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.f1['image'] == 'pyimage2':
+                self.f1.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.f1.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.f1.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def movef3(self):
+        if not self.check:
+            if self.f3['image'] == 'pyimage1':
+                self.f3.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.f3['image'] == 'pyimage2':
+                self.f3.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.f3.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.f3.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def movef5(self):
+        if not self.check:
+            if self.f5['image'] == 'pyimage1':
+                self.f5.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.f5['image'] == 'pyimage2':
+                self.f5.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.f5.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.f5.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def movef7(self):
+        if not self.check:
+            if self.f7['image'] == 'pyimage1':
+                self.f7.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.f7['image'] == 'pyimage2':
+                self.f7.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.f7.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.f7.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moveg2(self):
+        if not self.check:
+            if self.g2['image'] == 'pyimage1':
+                self.g2.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.g2['image'] == 'pyimage2':
+                self.g2.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.g2.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.g2.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moveg4(self):
+        if not self.check:
+            if self.g4['image'] == 'pyimage1':
+                self.g4.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.g4['image'] == 'pyimage2':
+                self.g4.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.g4.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.g4.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moveg6(self):
+        if not self.check:
+            if self.g6['image'] == 'pyimage1':
+                self.g6.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.g6['image'] == 'pyimage2':
+                self.g6.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.g6.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.g6.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moveg8(self):
+        if not self.check:
+            if self.g8['image'] == 'pyimage1':
+                self.g8.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.g8['image'] == 'pyimage2':
+                self.g8.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.g8.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.g8.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+
+    def moveh1(self):
+        if not self.check:
+            if self.h1['image'] == 'pyimage1':
+                self.h1.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.h1['image'] == 'pyimage2':
+                self.h1.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.h1.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.h1.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moveh3(self):
+        if not self.check:
+            if self.h3['image'] == 'pyimage1':
+                self.h3.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.h3['image'] == 'pyimage2':
+                self.h3.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.h3.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.h3.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moveh5(self):
+        if not self.check:
+            if self.h5['image'] == 'pyimage1':
+                self.h5.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.h5['image'] == 'pyimage2':
+                self.h5.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.h5.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.h5.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
+    def moveh7(self):
+        if not self.check:
+            if self.h7['image'] == 'pyimage1':
+                self.h7.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.h7['image'] == 'pyimage2':
+                self.h7.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.h7.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.h7.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
 
