@@ -17,7 +17,7 @@ class Checkers(tk.Frame):
         self.piece = ""
 
         self.a1 = tk.Button(self, width=4, height=2, background=self.red_sqr).grid(row=0, column=0, sticky=tk.W)
-        self.a2 = tk.Button(self, image=self.redpiece, width=32, height=35, background=self.black_sqr)
+        self.a2 = tk.Button(self, image=self.redpiece, width=32, height=35, background=self.black_sqr, command=self.movea2)
         self.a2.grid(row=0, column=1, sticky=tk.W)
         self.a3 = tk.Button(self, width=4, height=2, background=self.red_sqr)
         self.a3.grid(row=0, column=2, sticky=tk.W)
@@ -116,7 +116,22 @@ class Checkers(tk.Frame):
         self.h8 = tk.Button(self, width=4, height=2, background=self.red_sqr).grid(row=7, column=7, sticky=tk.W)
 
 
-
+    def movea2(self):
+        if not self.check:
+            if self.a2['image'] == 'pyimage1':
+                self.a2.configure(image=self.transparent)
+                self.piece = 'red'
+            elif self.a2['image'] == 'pyimage2':
+                self.a2.configure(image=self.transparent)
+                self.piece = 'black'
+            self.check = True
+        elif self.check:
+            if self.piece == 'red':
+                self.a4.configure(image=self.redpiece)
+            elif self.piece == 'black':
+                self.a4.configure(image=self.blackpiece)
+            self.piece = ''
+            self.check = False
     def movea4(self):
         if not self.check:
             if self.a4['image'] == 'pyimage1':
