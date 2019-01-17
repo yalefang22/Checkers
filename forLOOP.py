@@ -1,3 +1,5 @@
+import tkinter as tk
+
 def create_widgets(self):
     red_sqr = 'red4'
     black_sqr = 'black'
