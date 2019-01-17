@@ -718,6 +718,8 @@ class Checkers(tk.Frame):
                     self.g4.configure(image=self.transparent)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def movef7(self):
         if not self.check:
             if self.f7['image'] == 'pyimage1':
