@@ -14,6 +14,9 @@ class Checkers(tk.Frame):
         self.blackpiece = tk.PhotoImage(file='greycircle.png')
         self.transparent = tk.PhotoImage(file='transparent.png')
         self.purplepiece = tk.PhotoImage(file='purplebutton.png')
+        self.redking = tk.PhotoImage(file='redking.png')
+        self.blackking = tk.PhotoImage(file='blackking.png')
+
         self.check = False
         self.piece = ""
 
