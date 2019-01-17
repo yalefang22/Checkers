@@ -822,6 +822,8 @@ class Checkers(tk.Frame):
                     self.h7.configure(image=self.transparent)
             self.piece = ''
             self.check = False
+            self.clear()
+
     def moveg8(self):
         if not self.check:
             if self.g8['image'] == 'pyimage1':
@@ -862,6 +864,7 @@ class Checkers(tk.Frame):
                 self.h1.configure(image=self.blackpiece)
             self.piece = ''
             self.check = False
+            self.clear()
 
     def moveh3(self):
         if not self.check:
