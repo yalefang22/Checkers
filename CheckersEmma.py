@@ -1,17 +1,5 @@
 import tkinter as tk
 
-# hey guys hopefully youre actually reading this
-# so youre going to notice that i assigned numbers to every single grid piece
-# and there is a REASON im not just dumb (i promise)
-# mr. respass and i talked about how to check for where it's actually going to do
-# i came up with the idea of assigning numbers of positions to every grid piece in order to check before moving
-# and if the number isn't correct, it can't move
-# mr respass agreed with my idea, but also said checkers is super hard to code
-# he offered that we could try to switch it to reversi, which is a similar layout but logically and game-wise simpler
-# feel free to think about it, and ill obviously do whatever yall wanna do
-# and also if my assignment thing is dumb feel free to delete that
-# ok bye have fun coding
-
 class Checkers(tk.Frame):
     def __init__(self, master):
         super().__init__(master)
