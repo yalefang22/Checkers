@@ -175,11 +175,14 @@ class Checkers(tk.Frame):
             if self.piece == 'red':
                 self.a2.configure(image=self.redpiece)
             elif self.piece == 'black':
-                self.a2.configure(image=self.blackpiece)
+                self.a2.configure(image=self.blackking)
                 if self.b1['image'] == 'pyimage4':
                     self.b1.configure(image=self.transparent)
                 elif self.b3['image'] == 'pyimage4':
                     self.b3.configure(image=self.transparent)
+                elif self.b3['image'] == 'pyimage1' and self.c4['image'] == 'pyimage4':
+                    self.b3.configure(image=self.transparent)
+                    self.c4.configure(image=self.transparent)
             self.piece = ''
             self.check = False
             self.clear()
@@ -197,11 +200,17 @@ class Checkers(tk.Frame):
             if self.piece == 'red':
                 self.a4.configure(image=self.redpiece)
             elif self.piece == 'black':
-                self.a4.configure(image=self.blackpiece)
+                self.a4.configure(image=self.blackking)
                 if self.b5['image'] == 'pyimage4':
                     self.b5.configure(image=self.transparent)
                 elif self.b3['image'] == 'pyimage4':
                     self.b3.configure(image=self.transparent)
+                elif self.b3['image'] == 'pyimage1' and self.c2['image'] == 'pyimage4':
+                    self.b3.configure(image=self.transparent)
+                    self.c2.configure(image=self.transparent)
+                elif self.b5['image'] == 'pyimage1' and self.c6['image'] == 'pyimage4':
+                    self.b5.configure(image=self.transparent)
+                    self.c6.configure(image=self.transparent)
             self.piece = ''
             self.check = False
             self.clear()
@@ -219,11 +228,17 @@ class Checkers(tk.Frame):
             if self.piece == 'red':
                 self.a6.configure(image=self.redpiece)
             elif self.piece == 'black':
-                self.a6.configure(image=self.blackpiece)
+                self.a6.configure(image=self.blackking)
                 if self.b5['image'] == 'pyimage4':
                     self.b5.configure(image=self.transparent)
                 elif self.b7['image'] == 'pyimage4':
                     self.b7.configure(image=self.transparent)
+                elif self.b7['image'] == 'pyimage1' and self.c8['image'] == 'pyimage4':
+                    self.b7.configure(image=self.transparent)
+                    self.c8.configure(image=self.transparent)
+                elif self.b5['image'] == 'pyimage1' and self.c4['image'] == 'pyimage4':
+                    self.b5.configure(image=self.transparent)
+                    self.c4.configure(image=self.transparent)
             self.piece = ''
             self.check = False
             self.clear()
@@ -241,9 +256,12 @@ class Checkers(tk.Frame):
             if self.piece == 'red':
                 self.a8.configure(image=self.redpiece)
             elif self.piece == 'black':
-                self.a8.configure(image=self.blackpiece)
+                self.a8.configure(image=self.blackking)
                 if self.b7['image'] == 'pyimage4':
                     self.b7.configure(image=self.transparent)
+                elif self.b7['image'] == 'pyimage1' and self.c6['image'] == 'pyimage4':
+                    self.b7.configure(image=self.transparent)
+                    self.c6.configure(image=self.transparent)
             self.piece = ''
             self.check = False
             self.clear()
@@ -266,6 +284,9 @@ class Checkers(tk.Frame):
                 self.b1.configure(image=self.blackpiece)
                 if self.c2['image'] == 'pyimage4':
                     self.c2.configure(image=self.transparent)
+                elif self.c2['image'] == 'pyimage1' and self.d3['image'] == 'pyimage4':
+                    self.c2.configure(image=self.transparent)
+                    self.d3.configure(image=self.transparent)
             self.piece = ''
             self.check = False
             self.clear()
@@ -292,6 +313,12 @@ class Checkers(tk.Frame):
                     self.c2.configure(image=self.transparent)
                 elif self.c4['image'] == 'pyimage4':
                     self.c4.configure(image=self.transparent)
+                elif self.c2['image'] == 'pyimage1' and self.d1['image'] == 'pyimage4':
+                    self.c2.configure(image=self.transparent)
+                    self.d1.configure(image=self.transparent)
+                elif self.c4['image'] == 'pyimage1' and self.d5['image'] == 'pyimage4':
+                    self.c4.configure(image=self.transparent)
+                    self.d5.configure(image=self.transparent)
             self.piece = ''
             self.check = False
             self.clear()
@@ -319,6 +346,12 @@ class Checkers(tk.Frame):
                     self.c6.configure(image=self.transparent)
                 elif self.c4['image'] == 'pyimage4':
                     self.c4.configure(image=self.transparent)
+                elif self.c6['image'] == 'pyimage1' and self.d7['image'] == 'pyimage4':
+                    self.c6.configure(image=self.transparent)
+                    self.d7.configure(image=self.transparent)
+                elif self.c4['image'] == 'pyimage1' and self.d3['image'] == 'pyimage4':
+                    self.c4.configure(image=self.transparent)
+                    self.d3.configure(image=self.transparent)
             self.piece = ''
             self.check = False
             self.clear()
@@ -345,6 +378,9 @@ class Checkers(tk.Frame):
                     self.c8.configure(image=self.transparent)
                 elif self.c6['image'] == 'pyimage4':
                     self.c6.configure(image=self.transparent)
+                elif self.c6['image'] == 'pyimage1' and self.d5['image'] == 'pyimage4':
+                    self.c6.configure(image=self.transparent)
+                    self.d5.configure(image=self.transparent)
             self.piece = ''
             self.check = False
             self.clear()
@@ -365,12 +401,18 @@ class Checkers(tk.Frame):
                     self.b1.configure(image=self.transparent)
                 elif self.b3['image'] == 'pyimage4':
                     self.b3.configure(image=self.transparent)
+                elif self.b3['image'] == 'pyimage2' and self.a4['image'] == 'pyimage4':
+                    self.a4.configure(image=self.transparent)
+                    self.b3.configure(image=self.transparent)
             elif self.piece == 'black':
                 self.c2.configure(image=self.blackpiece)
                 if self.d1['image'] == 'pyimage4':
                     self.d1.configure(image=self.transparent)
                 elif self.d3['image'] == 'pyimage4':
                     self.d3.configure(image=self.transparent)
+                elif self.d3['image'] == 'pyimage1' and self.e4['image'] == 'pyimage4':
+                    self.d3.configure(image=self.transparent)
+                    self.e4.configure(image=self.transparent)
             self.piece = ''
             self.check = False
             self.clear()
@@ -397,6 +439,12 @@ class Checkers(tk.Frame):
                     self.d3.configure(image=self.transparent)
                 elif self.d5['image'] == 'pyimage4':
                     self.d5.configure(image=self.transparent)
+                elif self.d3['image'] == 'pyimage1' and self.e2['image'] == 'pyimage4':
+                    self.d3.configure(image=self.transparent)
+                    self.e2.configure(image=self.transparent)
+                elif self.d5['image'] == 'pyimage1' and self.e6['image'] == 'pyimage4':
+                    self.d5.configure(image=self.transparent)
+                    self.e6.configure(image=self.transparent)
             self.piece = ''
             self.check = False
             self.clear()
@@ -423,6 +471,12 @@ class Checkers(tk.Frame):
                     self.d5.configure(image=self.transparent)
                 elif self.d7['image'] == 'pyimage4':
                     self.d7.configure(image=self.transparent)
+                elif self.d7['image'] == 'pyimage1' and self.e8['image'] == 'pyimage4':
+                    self.d7.configure(image=self.transparent)
+                    self.e8.configure(image=self.transparent)
+                elif self.d5['image'] == 'pyimage1' and self.e4['image'] == 'pyimage4':
+                    self.d5.configure(image=self.transparent)
+                    self.e4.configure(image=self.transparent)
             self.piece = ''
             self.check = False
             self.clear()
@@ -445,6 +499,9 @@ class Checkers(tk.Frame):
                 self.c8.configure(image=self.blackpiece)
                 if self.d7['image'] == 'pyimage4':
                     self.d7.configure(image=self.transparent)
+                elif self.d7['image'] == 'pyimage1' and self.e6['image'] == 'pyimage4':
+                    self.d7.configure(image=self.transparent)
+                    self.e6.configure(image=self.transparent)
             self.piece = ''
             self.check = False
             self.clear()
@@ -866,7 +923,7 @@ class Checkers(tk.Frame):
             self.check = True
         elif self.check:
             if self.piece == 'red':
-                self.h1.configure(image=self.redpiece)
+                self.h1.configure(image=self.redking)
                 if self.g2['image'] == 'pyimage4':
                     self.g2.configure(image=self.transparent)
             elif self.piece == 'black':
@@ -886,7 +943,7 @@ class Checkers(tk.Frame):
             self.check = True
         elif self.check:
             if self.piece == 'red':
-                self.h3.configure(image=self.redpiece)
+                self.h3.configure(image=self.redking)
                 if self.g2['image'] == 'pyimage4':
                     self.g2.configure(image=self.transparent)
                 elif self.g4['image'] == 'pyimage4':
@@ -908,7 +965,7 @@ class Checkers(tk.Frame):
             self.check = True
         elif self.check:
             if self.piece == 'red':
-                self.h5.configure(image=self.redpiece)
+                self.h5.configure(image=self.redking)
                 if self.g6['image'] == 'pyimage4':
                     self.g6.configure(image=self.transparent)
                 elif self.g4['image'] == 'pyimage4':
@@ -930,7 +987,7 @@ class Checkers(tk.Frame):
             self.check = True
         elif self.check:
             if self.piece == 'red':
-                self.h7.configure(image=self.redpiece)
+                self.h7.configure(image=self.redking)
                 if self.g6['image'] == 'pyimage4':
                     self.g6.configure(image=self.transparent)
                 elif self.g8['image'] == 'pyimage4':
