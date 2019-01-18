@@ -591,6 +591,12 @@ class Checkers(tk.Frame):
                     self.d5.configure(image=self.transparent)
                 elif self.d3['image'] == 'pyimage4':
                     self.d3.configure(image=self.transparent)
+                elif self.c2['image'] == 'pyimage4' and self.d3['image'] == 'pyimage2':
+                    self.c2.configure(image=self.transparent)
+                    self.d3.configure(image=self.transparent)
+                elif self.c6['image'] == 'pyimage4' and self.d5['image'] == 'pyimage2':
+                    self.c6.configure(image=self.transparent)
+                    self.d5.configure(image=self.transparent)
             elif self.piece == 'black':
                 self.e4.configure(image=self.blackpiece)
                 if self.f5['image'] == 'pyimage4':
