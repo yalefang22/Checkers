@@ -211,29 +211,27 @@ class Checkers(tk.Frame):
                 self.a2.configure(image=self.purplepiece)
                 self.piece = 'black'
             elif self.a2['image'] == 'pyimage5':
-                self.a2.configure(image=self.purplepiece)
+                self.a2.configure(image=self.purpleking)
                 self.piece = 'redking'
             elif self.a2['image'] == 'pyimage6':
-                self.a2.configure(image=self.purplepiece)
+                self.a2.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
             self.ablea2 = True
             self.ableb1 = True
             self.ableb3 = True
         elif self.check and self.ablea2:
-            if self.piece == 'red':
-                self.a2.configure(image=self.redpiece)
-            elif self.piece == 'redking':
+            if self.piece == 'redking':
                 self.a2.configure(image=self.redking)
-                if self.b1['image'] == 'pyimage4':
+                if self.b1['image'] == 'pyimage7':
                     self.b1.configure(image=self.transparent)
-                elif self.b3['image'] == 'pyimage4':
+                elif self.b3['image'] == 'pyimage7':
                     self.b3.configure(image=self.transparent)
             elif self.piece == 'black' or self.piece == 'blackking':
                 self.a2.configure(image=self.blackking)
-                if self.b1['image'] == 'pyimage4':
+                if self.b1['image'] == 'pyimage4' or self.b1['image'] == 'pyimage7':
                     self.b1.configure(image=self.transparent)
-                elif self.b3['image'] == 'pyimage4':
+                elif self.b3['image'] == 'pyimage4' or self.b3['image'] == 'pyimage7':
                     self.b3.configure(image=self.transparent)
             self.piece = ''
             self.check = False
@@ -320,6 +318,9 @@ class Checkers(tk.Frame):
             elif self.b1['image'] == 'pyimage2':
                 self.b1.configure(image=self.purplepiece)
                 self.piece = 'black'
+            elif self.b1['image'] == 'pyimage5':
+                self.b1.configure(image=self.purpleking)
+                self.piece = 'redking'
             self.check = True
             self.ableb1 = True
             if self.piece == 'red' or self.isking(self.b1):
