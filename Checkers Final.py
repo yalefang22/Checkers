@@ -637,11 +637,11 @@ class Checkers(tk.Frame):
             self.check = True
             self.abled5 = True
             if self.piece == 'red' or self.isking(self.d5):
-                self.ablec4 = True
-                self.ablec6 = True
-            if self.piece == 'black' or self.isking(self.d5):
                 self.ablee4 = True
                 self.ablee6 = True
+            if self.piece == 'black' or self.isking(self.d5):
+                self.ablec4 = True
+                self.ablec6 = True
         elif self.check and self.abled5:
             if self.piece == 'red':
                 self.d5.configure(image=self.redpiece)
