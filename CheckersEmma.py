@@ -361,6 +361,7 @@ class Checkers(tk.Frame):
             if self.piece == 'black' or self.isking(self.b3):
                 self.ablea2 = True
                 self.ablea4 = True
+
         elif self.check:
             if self.piece == 'red':
                 self.b3.configure(image=self.redpiece)
