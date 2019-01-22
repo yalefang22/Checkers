@@ -433,6 +433,12 @@ class Checkers(tk.Frame):
                     self.b3.configure(image=self.transparent)
                 elif self.b5['image'] == 'pyimage4':
                     self.b5.configure(image=self.transparent)
+                elif self.b3['image'] == 'pyimage2' and self.a2['image'] == 'pyimage4':
+                    self.b3.configure(image=self.transparent)
+                    self.a2.configure(image=self.transparent)
+                elif self.b5['image'] == 'pyimage2' and self.a6['image'] == 'pyimage4':
+                    self.b5.configure(image=self.transparent)
+                    self.a6.configure(image=self.transparent)
             elif self.piece == 'black':
                 self.c4.configure(image=self.blackpiece)
                 if self.d3['image'] == 'pyimage4':
@@ -465,6 +471,12 @@ class Checkers(tk.Frame):
                     self.b5.configure(image=self.transparent)
                 elif self.b7['image'] == 'pyimage4':
                     self.b7.configure(image=self.transparent)
+                elif self.b7['image'] == 'pyimage2' and self.a8['image'] == 'pyimage4':
+                    self.b7.configure(image=self.transparent)
+                    self.a8.configure(image=self.transparent)
+                elif self.b5['image'] == 'pyimage2' and self.a4['image'] == 'pyimage4':
+                    self.b5.configure(image=self.transparent)
+                    self.a4.configure(image=self.transparent)
             elif self.piece == 'black':
                 self.c6.configure(image=self.blackpiece)
                 if self.d5['image'] == 'pyimage4':
@@ -495,6 +507,9 @@ class Checkers(tk.Frame):
                 self.c8.configure(image=self.redpiece)
                 if self.b7['image'] == 'pyimage4':
                     self.b7.configure(image=self.transparent)
+                elif self.b7['image'] == 'pyimage2' and self.a6['image'] == 'pyimage4':
+                    self.b7.configure(image=self.transparent)
+                    self.a6.configure(image=self.transparent)
             elif self.piece == 'black':
                 self.c8.configure(image=self.blackpiece)
                 if self.d7['image'] == 'pyimage4':
