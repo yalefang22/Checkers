@@ -1,6 +1,14 @@
 import tkinter as tk
 
-
+# @ YALE
+# YALE I DONT KNOW HOW YOU CODED THE JUMPING THING. BUT THERE IS AN ISSUE
+# AFTER JUMPING TRY TO GO BACKWARDS
+# IT BREAKS THE WHOLE THINGIE
+# I TRIED TO FIGURE OUT WHAT TO dO THE WHOLE CLASS BUT I HAD NO IDEA HOW YOU EVEN DID WHAT YOU DID
+# SO WE NEED TO FIX IT
+# SO YOU CANT DO THAT
+# ANYMORE
+# OK GOODBYE
 class Checkers(tk.Frame):
     def __init__(self, master):
         super().__init__(master)
@@ -10,13 +18,13 @@ class Checkers(tk.Frame):
     def create_widgets(self):
         self.red_sqr = 'red4'
         self.black_sqr = 'black'
-        self.redpiece = tk.PhotoImage(file="Red_Circle.png")
-        self.blackpiece = tk.PhotoImage(file='greycircle.png')
+        self.redpiece = tk.PhotoImage(file="RedCircle.png")
+        self.blackpiece = tk.PhotoImage(file='GreyCircle.png')
         self.transparent = tk.PhotoImage(file='transparent.png')
-        self.purplepiece = tk.PhotoImage(file='purplebutton.png')
-        self.redking = tk.PhotoImage(file='redking.png')
-        self.blackking = tk.PhotoImage(file='blackking.png')
-        self.purpleking = tk.PhotoImage(file='purpleking.png')
+        self.purplepiece = tk.PhotoImage(file='PurpleButton.png')
+        self.redking = tk.PhotoImage(file='RedKing.png')
+        self.blackking = tk.PhotoImage(file='BlackKing.png')
+        self.purpleking = tk.PhotoImage(file='PurpleKing.png')
 
         self.check = False
         self.piece = ""
@@ -314,14 +322,16 @@ class Checkers(tk.Frame):
             elif self.b1['image'] == 'pyimage5':
                 self.b1.configure(image=self.purpleking)
                 self.piece = 'redking'
+                self.iskingb1 = True
             elif self.b1['image'] == 'pyimage6':
                 self.b1.configure(image=self.purpleking)
                 self.piece = 'blackking'
+                self.iskingb1 = True
             self.check = True
             self.ableb1 = True
-            if self.piece == 'red' or self.isking(self.b1):
+            if self.piece == 'red' or self.iskingb1:
                 self.ablec2 = True
-            elif self.piece == 'black:' or self.isking(self.b1):
+            elif self.piece == 'black:' or self.iskingb1:
                 self.ablea2 = True
         elif self.check:
             if self.piece == 'red':
