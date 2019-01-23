@@ -3,7 +3,7 @@ import tkinter as tk
 def create_widgets(self):
     red_sqr = 'red4'
     black_sqr = 'black'
-    self.loadimage = tk.PhotoImage(file="Red_Circle.png")
+    self.loadimage = tk.PhotoImage(file="RedCircle.png")
     self.loadimage2 = tk.PhotoImage(file="GreyCircle.png")
 
     row = 0

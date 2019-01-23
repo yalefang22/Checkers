@@ -10,10 +10,10 @@ class Checkers(tk.Frame):
     def create_widgets(self):
         self.red_sqr = 'red4'
         self.black_sqr = 'black'
-        self.redpiece = tk.PhotoImage(file="Red_Circle.png")
-        self.blackpiece = tk.PhotoImage(file='greycircle.png')
+        self.redpiece = tk.PhotoImage(file="RedCircle.png")
+        self.blackpiece = tk.PhotoImage(file='GreyCircle.png')
         self.transparent = tk.PhotoImage(file='transparent.png')
-        self.purplepiece = tk.PhotoImage(file='purplebutton.png')
+        self.purplepiece = tk.PhotoImage(file='PurpleButton.png')
         self.check = False
         self.piece = ""
 
