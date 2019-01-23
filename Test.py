@@ -286,7 +286,6 @@ class Checkers(tk.Frame):
                 self.a8.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
-            self.check = True
             self.ablea8 = True
             self.ableb7 = True
         elif self.check:
