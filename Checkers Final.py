@@ -1054,7 +1054,7 @@ class Checkers(tk.Frame):
             elif self.g8['image'] == 'pyimage5':
                 self.g8.configure(image=self.purpleking)
                 self.piece = 'redking'
-            elif self.g8['image'] == pyimage6:
+            elif self.g8['image'] == 'pyimage6':
                 self.g8.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
