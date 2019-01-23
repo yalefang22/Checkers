@@ -360,17 +360,10 @@ class Checkers(tk.Frame):
                 self.b1.configure(image=self.blackking)
             elif self.piece == 'black':
                 self.b1.configure(image=self.blackking)
-
-######FIXXXXXXXXXX
-
             if self.b7['image'] == 'pyimage4' or self.b7['image'] == 'pyimage7':
-                    self.b7.configure(image=self.transparent)
-            elif self.b7['image'] == 'pyimage4' or self.b7['image'] == 'pyimage7':
                     self.b7.configure(image=self.transparent)
             elif self.b5['image'] == 'pyimage4' or self.b5['image'] == 'pyimage7':
                     self.b5.configure(image=self.transparent)
-            elif self.b7['image'] == 'pyimage4' or self.b7['image'] == 'pyimage7':
-                    self.b7.configure(image=self.transparent)
             self.piece = ''
             self.check = False
             self.clear()
@@ -1257,6 +1250,10 @@ class Checkers(tk.Frame):
         self.ableh3 = False
         self.ableh5 = False
         self.ableh7 = False
+
+        if self.a2['image'] ==  'pyimage4' or self.a2['image'] == 'pyimage7':
+            self.a2.configure(image=self.transparent)
+
 
     def isking(self, piece):
         if piece['image'] == 'pyimage5':
