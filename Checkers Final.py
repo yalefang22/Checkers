@@ -1224,9 +1224,9 @@ class Checkers(tk.Frame):
         self.ableh7 = False
 
     def isking(self, piece):
-        if piece['image'] == 'pyimage5':
+        if self.piece == 'redking'
             return True
-        elif piece['image'] == 'pyimage6':
+        elif piece['image'] == 'blackking':
             return True
         else:
             return False
