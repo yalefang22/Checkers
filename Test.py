@@ -286,7 +286,6 @@ class Checkers(tk.Frame):
                 self.a8.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
-            self.check = True
             self.ablea8 = True
             self.ableb7 = True
         elif self.check:
@@ -401,6 +400,13 @@ class Checkers(tk.Frame):
                 self.b5.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ableb5 = True
+            if self.piece == 'red' or self.isking(self.b5):
+                self.ablec4 = True
+                self.ablec6 = True
+            if self.piece == 'black' or self.isking(self.b5):
+                self.ablea4 = True
+                self.ablea6 = True
         elif self.check:
             if self.piece == 'red':
                 self.b5.configure(image=self.redpiece)
@@ -439,6 +445,13 @@ class Checkers(tk.Frame):
                 self.b7.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ableb7 = True
+            if self.piece == 'red' or self.isking(self.b7):
+                self.ablec6 = True
+                self.ablec8 = True
+            if self.piece == 'black' or self.isking(self.b7):
+                self.ablea6 = True
+                self.ablea8 = True
         elif self.check:
             if self.piece == 'red':
                 self.b7.configure(image=self.redpiece)
@@ -474,6 +487,12 @@ class Checkers(tk.Frame):
                 self.c2.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            if self.piece == 'red' or self.isking(self.c2):
+                self.abled1 = True
+                self.abled3 = True
+            if self.piece == 'black' or self.isking(self.c2):
+                self.ableb1 = True
+                self.ableb3 = True
         elif self.check:
             if self.piece == 'red':
                 self.c2.configure(image=self.redpiece)
@@ -512,6 +531,13 @@ class Checkers(tk.Frame):
                 self.c4.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ablec4 = True
+            if self.piece == 'red' or self.isking(self.c4):
+                self.abled3 = True
+                self.abled5 = True
+            if self.piece == 'black' or self.isking(self.c4):
+                self.ableb3 = True
+                self.ableb5 = True
         elif self.check:
             if self.piece == 'red':
                 self.c4.configure(image=self.redpiece)
@@ -556,6 +582,13 @@ class Checkers(tk.Frame):
                 self.c6.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ablec6 = True
+            if self.piece == 'red' or self.isking(self.c6):
+                self.abled5 = True
+                self.abled7 = True
+            if self.piece == 'black' or self.isking(self.c6):
+                self.ableb5 = True
+                self.ableb7 = True
         elif self.check:
             if self.piece == 'red':
                 self.c6.configure(image=self.redpiece)
@@ -600,6 +633,11 @@ class Checkers(tk.Frame):
                 self.c8.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ablec8 = True
+            if self.piece == 'red' or self.isking(self.b3):
+                self.abled7 = True
+            if self.piece == 'black' or self.isking(self.b3):
+                self.ableb7 = True
         elif self.check:
             if self.piece == 'red':
                 self.c8.configure(image=self.redpiece)
@@ -634,6 +672,11 @@ class Checkers(tk.Frame):
                 self.d1.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.abled1 = True
+            if self.piece == 'red' or self.isking(self.d1):
+                self.ablee2 = True
+            if self.piece == 'black' or self.isking(self.d1):
+                self.ablec2 = True
         elif self.check:
             if self.piece == 'red':
                 self.d1.configure(image=self.redpiece)
@@ -668,6 +711,13 @@ class Checkers(tk.Frame):
                 self.d3.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.abled3 = True
+            if self.piece == 'red' or self.isking(self.d3):
+                self.ablee2 = True
+                self.ablee4 = True
+            if self.piece == 'black' or self.isking(self.d3):
+                self.ablec2 = True
+                self.ablec4 = True
         elif self.check:
             if self.piece == 'red':
                 self.d3.configure(image=self.redpiece)
@@ -712,6 +762,13 @@ class Checkers(tk.Frame):
                 self.d5.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.abled5 = True
+            if self.piece == 'red' or self.isking(self.d5):
+                self.ablee4 = True
+                self.ablee6 = True
+            if self.piece == 'black' or self.isking(self.d5):
+                self.ablec4 = True
+                self.ablec6 = True
         elif self.check:
             if self.piece == 'red':
                 self.d5.configure(image=self.redpiece)
@@ -756,6 +813,12 @@ class Checkers(tk.Frame):
                 self.d7.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            if self.piece == 'red' or self.isking(self.d7):
+                self.ablee6 = True
+                self.ablee8 = True
+            if self.piece == 'black' or self.isking(self.d7):
+                self.ablec6 = True
+                self.ablec8 = True
         elif self.check:
             if self.piece == 'red':
                 self.d7.configure(image=self.redpiece)
@@ -794,6 +857,13 @@ class Checkers(tk.Frame):
                 self.e2.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ablee2 = True
+            if self.piece == 'red' or self.isking(self.e2):
+                self.ablef1 = True
+                self.ablef3 = True
+            if self.piece == 'black' or self.isking(self.e2):
+                self.abled1 = True
+                self.abled3 = True
         elif self.check:
             if self.piece == 'red':
                 self.e2.configure(image=self.redpiece)
@@ -832,6 +902,13 @@ class Checkers(tk.Frame):
                 self.e4.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ablee4 = True
+            if self.piece == 'red' or self.isking(self.e4):
+                self.ablef3 = True
+                self.ablef5 = True
+            if self.piece == 'black' or self.isking(self.e4):
+                self.abled3 = True
+                self.abled5 = True
         elif self.check:
             if self.piece == 'red':
                 self.e4.configure(image=self.redpiece)
@@ -876,6 +953,13 @@ class Checkers(tk.Frame):
                 self.e6.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ablee6 = True
+            if self.piece == 'red' or self.isking(self.e6):
+                self.ablef5 = True
+                self.ablef7 = True
+            if self.piece == 'black' or self.isking(self.e6):
+                self.abled5 = True
+                self.abled7 = True
         elif self.check:
             if self.piece == 'red':
                 self.e6.configure(image=self.redpiece)
@@ -920,6 +1004,11 @@ class Checkers(tk.Frame):
                 self.e8.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ablee8 = True
+            if self.piece == 'red' or self.isking(self.e8):
+                self.ablef7 = True
+            if self.piece == 'black' or self.isking(self.e8):
+                self.abled7 = True
         elif self.check:
             if self.piece == 'red':
                 self.e8.configure(image=self.redpiece)
@@ -954,6 +1043,11 @@ class Checkers(tk.Frame):
                 self.f1.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ablef1 = True
+            if self.piece == 'red' or self.isking(self.f1):
+                self.ableg2 = True
+            if self.piece == 'black' or self.isking(self.f1):
+                self.ablee2 = True
         elif self.check:
             if self.piece == 'red':
                 self.f1.configure(image=self.redpiece)
@@ -988,6 +1082,13 @@ class Checkers(tk.Frame):
                 self.f3.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ablef3 = True
+            if self.piece == 'red' or self.isking(self.f3):
+                self.ableg2 = True
+                self.ableg4 = True
+            if self.piece == 'black' or self.isking(self.f3):
+                self.ablee2 = True
+                self.ablee4 = True
         elif self.check:
             if self.piece == 'red':
                 self.f3.configure(image=self.redpiece)
@@ -1032,6 +1133,13 @@ class Checkers(tk.Frame):
                 self.f5.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ablef5 = True
+            if self.piece == 'red' or self.isking(self.f5):
+                self.ableg4 = True
+                self.ableg6 = True
+            if self.piece == 'black' or self.isking(self.f5):
+                self.ablee4 = True
+                self.ablee6 = True
         elif self.check:
             if self.piece == 'red':
                 self.f5.configure(image=self.redpiece)
@@ -1076,6 +1184,13 @@ class Checkers(tk.Frame):
                 self.f7.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ablef7 = True
+            if self.piece == 'red' or self.isking(self.f7):
+                self.ableg6 = True
+                self.ableg8 = True
+            if self.piece == 'black' or self.isking(self.f7):
+                self.ablee6 = True
+                self.ablee8 = True
         elif self.check:
             if self.piece == 'red':
                 self.f7.configure(image=self.redpiece)
@@ -1114,6 +1229,13 @@ class Checkers(tk.Frame):
                 self.g2.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ableg2 = True
+            if self.piece == 'red' or self.isking(self.g2):
+                self.ableh1 = True
+                self.ableh3 = True
+            if self.piece == 'black' or self.isking(self.g2):
+                self.ablef1 = True
+                self.ablef3 = True
         elif self.check:
             if self.piece == 'red':
                 self.g2.configure(image=self.redpiece)
@@ -1149,6 +1271,13 @@ class Checkers(tk.Frame):
                 self.g4.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ableg4 = True
+            if self.piece == 'red' or self.isking(self.g4):
+                self.ableh3 = True
+                self.ableh5 = True
+            if self.piece == 'black' or self.isking(self.g4):
+                self.ablef3 = True
+                self.ablef5 = True
         elif self.check:
             if self.piece == 'red':
                 self.g4.configure(image=self.redpiece)
@@ -1187,6 +1316,13 @@ class Checkers(tk.Frame):
                 self.g6.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ableg6 = True
+            if self.piece == 'red' or self.isking(self.g4):
+                self.ableh5 = True
+                self.ableh7 = True
+            if self.piece == 'black' or self.isking(self.g6):
+                self.ablef5 = True
+                self.ablef7 = True
         elif self.check:
             if self.piece == 'red':
                 self.g6.configure(image=self.redpiece)
@@ -1225,6 +1361,11 @@ class Checkers(tk.Frame):
                 self.g8.configure(image=self.purpleking)
                 self.piece = 'blackking'
             self.check = True
+            self.ableg8 = True
+            if self.piece == 'red' or self.isking(self.g8):
+                self.ableh7 = True
+            if self.piece == 'black' or self.isking(self.g8):
+                self.ablef7 = True
         elif self.check:
             if self.piece == 'red':
                 self.g8.configure(image=self.redpiece)
@@ -1255,6 +1396,8 @@ class Checkers(tk.Frame):
             elif self.h1['image'] == 'pyimage6':
                 self.h1.configure(image=self.purpleking)
             self.check = True
+            self.ableh1 = True
+            self.ableg2 = True
         elif self.check:
             if self.piece == 'red':
                 self.h1.configure(image=self.redking)
@@ -1283,6 +1426,9 @@ class Checkers(tk.Frame):
             elif self.h3['image'] == 'pyimage6':
                 self.h3.configure(image=self.purpleking)
             self.check = True
+            self.ableh3 = True
+            self.ableg2 = True
+            self.ableg4 = True
         elif self.check:
             if self.piece == 'red':
                 self.h3.configure(image=self.redking)
@@ -1316,6 +1462,9 @@ class Checkers(tk.Frame):
             elif self.h5['image'] == 'pyimage6':
                 self.h5.configure(image=self.purpleking)
             self.check = True
+            self.ableh5 = True
+            self.ableg4 = True
+            self.ableg6 = True
         elif self.check:
             if self.piece == 'red':
                 self.h5.configure(image=self.redking)
@@ -1349,6 +1498,9 @@ class Checkers(tk.Frame):
             elif self.h7['image'] == 'pyimage6':
                 self.h7.configure(image=self.purpleking)
             self.check = True
+            self.ableh7 = True
+            self.ableg6 = True
+            self.ableg8 = True
         elif self.check:
             if self.piece == 'red':
                 self.h7.configure(image=self.redking)
