@@ -802,8 +802,16 @@ class Checkers(tk.Frame):
             self.check = True
             self.abled5 = True
             if self.piece == 'red' or self.piece == 'redking' or self.piece == 'blackking':
-                self.ablee4 = True
-                self.ablee6 = True
+                if self.e4['image'] != 'pyimage3':
+                    self.ablee4 = False
+                else:
+                    self.ablee4 = True
+                    self.ablee6 = True
+                if self.e6['image'] != 'pyimage3':
+                    self.ablee6 = False
+                else:
+                    self.ablee4 = True
+                    self.ablee6 = True
                 self.ablef3 = True
                 self.ablef7 = True
             if self.piece == 'black' or self.piece == 'redking' or self.piece == 'blackking':
