@@ -60,7 +60,6 @@ class Checkers(tk.Frame):
         self.ablef3 = False
         self.ablef5 = False
         self.ablef7 = False
-
         self.ableg2 = False
         self.ableg4 = False
         self.ableg6 = False
