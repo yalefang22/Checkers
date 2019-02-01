@@ -430,8 +430,14 @@ class Checkers(tk.Frame):
                 else:
                     self.abled5 = False
             if self.piece == 'black' or self.piece == 'redking' or self.piece == 'blackking':
-                self.ablea2 = True
-                self.ablea4 = True
+                if self.a2['image'] != 'pyimage3':
+                    self.ablea2 = False
+                else:
+                    self.ablea2 = True
+                if self.a4['image'] != 'pyimage3':
+                    self.ablea4 = False
+                else:
+                    self.ablea4 = True
         elif self.check and self.ableb3:
             if self.piece == 'red':
                 self.b3.configure(image=self.redpiece)
@@ -490,8 +496,14 @@ class Checkers(tk.Frame):
                 else:
                     self.abled3 = False
             if self.piece == 'black' or self.piece == 'redking' or self.piece == 'blackking':
-                self.ablea4 = True
-                self.ablea6 = True
+                if self.a6['image'] != 'pyimage3':
+                    self.ablea6 = False
+                else:
+                    self.ablea6 = True
+                if self.a4['image'] != 'pyimage3':
+                    self.ablea4 = False
+                else:
+                    self.ablea4 = True
         elif self.check and self.ableb5:
             if self.piece == 'red':
                 self.b5.configure(image=self.redpiece)
@@ -545,8 +557,14 @@ class Checkers(tk.Frame):
                 else:
                     self.ablec8 = True
             if self.piece == 'black' or self.piece == 'redking' or self.piece == 'blackking':
-                self.ablea6 = True
-                self.ablea8 = True
+                if self.a6['image'] != 'pyimage3':
+                    self.ablea6 = False
+                else:
+                    self.ablea6 = True
+                if self.a8['image'] != 'pyimage3':
+                    self.ablea8 = False
+                else:
+                    self.ablea8 = True
         elif self.check and self.ableb7:
             if self.piece == 'red':
                 self.b7.configure(image=self.redpiece)
@@ -1050,7 +1068,10 @@ class Checkers(tk.Frame):
                 else:
                     self.ablee8 = True
                     self.ablee6 = True
-                self.ablef5 = True
+                if self.e6['image'] == 'pyimage2' and self.f5['image'] == 'pyimage3':
+                    self.ablef5 = True
+                else:
+                    self.ablef5 = False
             if self.piece == 'black' or self.piece == 'redking' or self.piece == 'blackking':
                 if self.c8['image'] != 'pyimage3':
                     self.ablec8 = False
@@ -1109,9 +1130,18 @@ class Checkers(tk.Frame):
             self.check = True
             self.ablee2 = True
             if self.piece == 'red' or self.piece == 'redking' or self.piece == 'blackking':
-                self.ablef1 = True
-                self.ablef3 = True
-                self.ableg4 = True
+                if self.f3['image'] != 'pyimage3':
+                    self.ablef3 = False
+                else:
+                    self.ablef3 = True
+                if self.f1['image'] != 'pyimage3':
+                    self.ablef1 = False
+                else:
+                    self.ablef1 = True
+                if self.f3['image'] == 'pyimage2' and self.g4['image'] == 'pyimage3':
+                    self.ableg4 = True
+                else:
+                    self.ableg4 = False
             if self.piece == 'black' or self.piece == 'redking' or self.piece == 'blackking':
                 self.abled1 = True
                 self.abled3 = True
@@ -1156,10 +1186,22 @@ class Checkers(tk.Frame):
             self.check = True
             self.ablee4 = True
             if self.piece == 'red' or self.piece == 'redking' or self.piece == 'blackking':
-                self.ablef3 = True
-                self.ablef5 = True
-                self.ableg2 = True
-                self.ableg6 = True
+                if self.f3['image'] != 'pyimage3':
+                    self.ablef3 = False
+                else:
+                    self.ablef3 = True
+                if self.f5['image'] != 'pyimage3':
+                    self.ablef5 = False
+                else:
+                    self.ablef5 = True
+                if self.f3['image'] == 'pyimage2' and self.g2['image'] == 'pyimage3':
+                    self.ableg2 = True
+                else:
+                    self.ableg2 = False
+                if self.f5['image'] == 'pyimage2' and self.g6['image'] == 'pyimage3':
+                    self.ableg6 = True
+                else:
+                    self.ableg6 = False
             if self.piece == 'black' or self.piece == 'redking' or self.piece == 'blackking':
                 self.abled3 = True
                 self.abled5 = True
@@ -1211,10 +1253,22 @@ class Checkers(tk.Frame):
             self.check = True
             self.ablee6 = True
             if self.piece == 'red' or self.piece == 'redking' or self.piece == 'blackking':
-                self.ablef5 = True
-                self.ablef7 = True
-                self.ableg4 = True
-                self.ableg8 = True
+                if self.f7['image'] != 'pyimage3':
+                    self.ablef7 = False
+                else:
+                    self.ablef7 = True
+                if self.f5['image'] != 'pyimage3':
+                    self.ablef5 = False
+                else:
+                    self.ablef5 = True
+                if self.f7['image'] == 'pyimage2' and self.g8['image'] == 'pyimage3':
+                    self.ableg8 = True
+                else:
+                    self.ableg8 = False
+                if self.f5['image'] == 'pyimage2' and self.g4['image'] == 'pyimage3':
+                    self.ableg4 = True
+                else:
+                    self.ableg4 = False
             if self.piece == 'black' or self.piece == 'redking' or self.piece == 'blackking':
                 self.abled5 = True
                 self.abled7 = True
