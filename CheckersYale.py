@@ -18,6 +18,7 @@ class Checkers(tk.Frame):
         self.blackking = tk.PhotoImage(file='BlackKing.png')
         self.purpleking = tk.PhotoImage(file='PurpleKing.png')
 
+
         self.check = False
         self.piece = ""
 
@@ -688,7 +689,7 @@ class Checkers(tk.Frame):
                     self.ableb3 = False
                 else:
                     self.ableb3 = True
-                if self.b3['image'] == 'pyimage2' and self.a2['image'] == 'pyimage3':
+                if self.b3['image'] == 'pyimage1' and self.a2['image'] == 'pyimage3':
                     self.ablea2 = True
                 else:
                     self.ablea2 = False
@@ -696,7 +697,7 @@ class Checkers(tk.Frame):
                     self.ableb5 = False
                 else:
                     self.ableb5 = True
-                if self.b5['image'] == 'pyimage2' and self.a6['image'] == 'pyimage3':
+                if self.b5['image'] == 'pyimage1' and self.a6['image'] == 'pyimage3':
                     self.ablea6 = True
                 else:
                     self.ablea6 = False
@@ -767,7 +768,7 @@ class Checkers(tk.Frame):
                     self.ableb7 = False
                 else:
                     self.ableb7 = True
-                if self.b7['image'] == 'pyimage2' and self.a8['image'] == 'pyimage3':
+                if self.b7['image'] == 'pyimage1' and self.a8['image'] == 'pyimage3':
                     self.ablea8 = True
                 else:
                     self.ablea8 = False
@@ -775,7 +776,7 @@ class Checkers(tk.Frame):
                     self.ableb5 = False
                 else:
                     self.ableb5 = True
-                if self.b5['image'] == 'pyimage2' and self.a4['image'] == 'pyimage3':
+                if self.b5['image'] == 'pyimage1' and self.a4['image'] == 'pyimage3':
                     self.ablea4 = True
                 else:
                     self.ablea4 = False
@@ -838,7 +839,7 @@ class Checkers(tk.Frame):
                     self.ableb7 = False
                 else:
                     self.ableb7 = True
-                if self.b7['image'] == 'pyimage2' and self.a6['image'] == 'pyimage3':
+                if self.b7['image'] == 'pyimage1' and self.a6['image'] == 'pyimage3':
                     self.ablea6 = True
                 else:
                     self.ablea6 = False
@@ -891,7 +892,7 @@ class Checkers(tk.Frame):
                     self.ablec2 = False
                 else:
                     self.ablec2 = True
-                if self.c2['image'] == 'pyimage' or self.b5['image'] == 'pyimage3':
+                if self.c2['image'] == 'pyimage1' or self.b5['image'] == 'pyimage3':
                     self.ableb3 = True
                 else:
                     self.ableb3 = False
@@ -956,11 +957,11 @@ class Checkers(tk.Frame):
                     self.ablec2 = False
                 else:
                     self.ablec2 = True
-                if self.c4['image'] == 'pyimage' or self.b5['image'] == 'pyimage3':
+                if self.c4['image'] == 'pyimage1' or self.b5['image'] == 'pyimage3':
                     self.ableb5 = True
                 else:
                     self.ableb5 = False
-                if self.c2['image'] == 'pyimage' or self.b1['image'] == 'pyimage3':
+                if self.c2['image'] == 'pyimage1' or self.b1['image'] == 'pyimage3':
                     self.ableb1 = True
                 else:
                     self.ableb1 = False
@@ -1035,11 +1036,11 @@ class Checkers(tk.Frame):
                     self.ablec6 = False
                 else:
                     self.ablec6 = True
-                if self.c4['image'] == 'pyimage' or self.b3['image'] == 'pyimage3':
+                if self.c4['image'] == 'pyimage1' or self.b3['image'] == 'pyimage3':
                     self.ableb3 = True
                 else:
                     self.ableb3 = False
-                if self.c6['image'] == 'pyimage' or self.b7['image'] == 'pyimage3':
+                if self.c6['image'] == 'pyimage1' or self.b7['image'] == 'pyimage3':
                     self.ableb7 = True
                 else:
                     self.ableb7 = False
@@ -1112,7 +1113,7 @@ class Checkers(tk.Frame):
                     self.ablec6 = False
                 else:
                     self.ablec6 = True
-                if self.c6['image'] == 'pyimage' or self.b5['image'] == 'pyimage3':
+                if self.c6['image'] == 'pyimage1' or self.b5['image'] == 'pyimage3':
                     self.ableb5 = True
                 else:
                     self.ableb5 = False
@@ -1173,7 +1174,7 @@ class Checkers(tk.Frame):
                     self.abled3 = False
                 else:
                     self.abled3 = True
-                if self.d3['image'] == 'pyimage' and self.c4['image'] == 'pyimage3':
+                if self.d3['image'] == 'pyimage1' and self.c4['image'] == 'pyimage3':
                     self.ablec4 = True
                 else:
                     self.ablec4 = False
@@ -1242,7 +1243,7 @@ class Checkers(tk.Frame):
                     self.abled3 = False
                 else:
                     self.abled3 = True
-                if self.d3['image'] == 'pyimage' and self.c2['image'] == 'pyimage3':
+                if self.d3['image'] == 'pyimage1' and self.c2['image'] == 'pyimage3':
                     self.ablec2 = True
                 else:
                     self.ablec2 = False
@@ -1250,7 +1251,7 @@ class Checkers(tk.Frame):
                     self.abled5 = False
                 else:
                     self.abled5 = True
-                if self.d5['image'] == 'pyimage' and self.c6['image'] == 'pyimage3':
+                if self.d5['image'] == 'pyimage1' and self.c6['image'] == 'pyimage3':
                     self.ablec6 = True
                 else:
                     self.ablec6 = False
@@ -1321,7 +1322,7 @@ class Checkers(tk.Frame):
                     self.abled7 = False
                 else:
                     self.abled7 = True
-                if self.d7['image'] == 'pyimage' and self.c8['image'] == 'pyimage3':
+                if self.d7['image'] == 'pyimage1' and self.c8['image'] == 'pyimage3':
                     self.ablec8 = True
                 else:
                     self.ablec8 = False
@@ -1329,7 +1330,7 @@ class Checkers(tk.Frame):
                     self.abled5 = False
                 else:
                     self.abled5 = True
-                if self.d5['image'] == 'pyimage' and self.c4['image'] == 'pyimage3':
+                if self.d5['image'] == 'pyimage1' and self.c4['image'] == 'pyimage3':
                     self.ablec4 = True
                 else:
                     self.ablec4 = False
@@ -1392,7 +1393,7 @@ class Checkers(tk.Frame):
                     self.abled7 = False
                 else:
                     self.abled7 = True
-                if self.d7['image'] == 'pyimage' and self.c6['image'] == 'pyimage3':
+                if self.d7['image'] == 'pyimage1' and self.c6['image'] == 'pyimage3':
                     self.ablec6 = True
                 else:
                     self.ablec6 = False
@@ -1445,7 +1446,7 @@ class Checkers(tk.Frame):
                     self.ablee2 = False
                 else:
                     self.ablee2 = True
-                if self.e2['image'] == 'pyimage' and self.d3['image'] == 'pyimage3':
+                if self.e2['image'] == 'pyimage1' and self.d3['image'] == 'pyimage3':
                     self.abled3 = True
                 else:
                     self.abled3 = False
@@ -1506,7 +1507,7 @@ class Checkers(tk.Frame):
                     self.ablee4 = False
                 else:
                     self.ablee4 = True
-                if self.e4['image'] == 'pyimage' and self.d3['image'] == 'pyimage3':
+                if self.e4['image'] == 'pyimage1' and self.d3['image'] == 'pyimage3':
                     self.abled3 = True
                 else:
                     self.abled3 = False
@@ -1514,7 +1515,7 @@ class Checkers(tk.Frame):
                     self.ablee2 = False
                 else:
                     self.ablee2 = True
-                if self.e2['image'] == 'pyimage' and self.d1['image'] == 'pyimage3':
+                if self.e2['image'] == 'pyimage1' and self.d1['image'] == 'pyimage3':
                     self.abled1 = True
                 else:
                     self.abled1 = False
@@ -1585,7 +1586,7 @@ class Checkers(tk.Frame):
                     self.ablee6 = False
                 else:
                     self.ablee6 = True
-                if self.e6['image'] == 'pyimage' and self.d7['image'] == 'pyimage3':
+                if self.e6['image'] == 'pyimage1' and self.d7['image'] == 'pyimage3':
                     self.abled7 = True
                 else:
                     self.abled7 = False
@@ -1593,7 +1594,7 @@ class Checkers(tk.Frame):
                     self.ablee4 = False
                 else:
                     self.ablee4 = True
-                if self.e4['image'] == 'pyimage' and self.d3['image'] == 'pyimage3':
+                if self.e4['image'] == 'pyimage1' and self.d3['image'] == 'pyimage3':
                     self.abled3 = True
                 else:
                     self.abled3 = False
@@ -1664,7 +1665,7 @@ class Checkers(tk.Frame):
                     self.ablee6 = False
                 else:
                     self.ablee6 = True
-                if self.e6['image'] == 'pyimage' and self.d5['image'] == 'pyimage3':
+                if self.e6['image'] == 'pyimage1' and self.d5['image'] == 'pyimage3':
                     self.abled5 = True
                 else:
                     self.abled5 = False
@@ -1725,7 +1726,7 @@ class Checkers(tk.Frame):
                     self.ablef3 = False
                 else:
                     self.ablef3 = True
-                if self.f3['image'] == 'pyimage' and self.e4['image'] == 'pyimage3':
+                if self.f3['image'] == 'pyimage1' and self.e4['image'] == 'pyimage3':
                     self.ablee4 = True
                 else:
                     self.ablee4 = False
@@ -1779,7 +1780,7 @@ class Checkers(tk.Frame):
                     self.ablef5 = False
                 else:
                     self.ablef5 = True
-                if self.f5['image'] == 'pyimage' and self.e6['image'] == 'pyimage3':
+                if self.f5['image'] == 'pyimage1' and self.e6['image'] == 'pyimage3':
                     self.ablee6 = True
                 else:
                     self.ablee6 = False
@@ -1787,7 +1788,7 @@ class Checkers(tk.Frame):
                     self.ablef3 = False
                 else:
                     self.ablef3 = True
-                if self.f3['image'] == 'pyimage' and self.e2['image'] == 'pyimage3':
+                if self.f3['image'] == 'pyimage1' and self.e2['image'] == 'pyimage3':
                     self.ablee2 = True
                 else:
                     self.ablee2 = False
@@ -1844,7 +1845,7 @@ class Checkers(tk.Frame):
                     self.ablef5 = False
                 else:
                     self.ablef5 = True
-                if self.f5['image'] == 'pyimage' and self.e4['image'] == 'pyimage3':
+                if self.f5['image'] == 'pyimage1' and self.e4['image'] == 'pyimage3':
                     self.ablee4 = True
                 else:
                     self.ablee4 = False
@@ -1852,7 +1853,7 @@ class Checkers(tk.Frame):
                     self.ablef7 = False
                 else:
                     self.ablef7 = True
-                if self.f7['image'] == 'pyimage' and self.e8['image'] == 'pyimage3':
+                if self.f7['image'] == 'pyimage1' and self.e8['image'] == 'pyimage3':
                     self.ablee8 = True
                 else:
                     self.ablee8 = False
@@ -1905,7 +1906,7 @@ class Checkers(tk.Frame):
                     self.ablef7 = False
                 else:
                     self.ablef7 = True
-                if self.f7['image'] == 'pyimage' and self.e6['image'] == 'pyimage3':
+                if self.f7['image'] == 'pyimage1' and self.e6['image'] == 'pyimage3':
                     self.ablee6 = True
                 else:
                     self.ablee6 = False
@@ -1945,7 +1946,7 @@ class Checkers(tk.Frame):
                     self.ableg2 = False
                 else:
                     self.ableg2 = True
-                if self.g2['image'] == 'pyimage' and self.f3['image'] == 'pyimage3':
+                if self.g2['image'] == 'pyimage1' and self.f3['image'] == 'pyimage3':
                     self.ablef3 = True
                 else:
                     self.ablef3 = False
@@ -1983,7 +1984,7 @@ class Checkers(tk.Frame):
                     self.ableg2 = False
                 else:
                     self.ableg2 = True
-                if self.g2['image'] == 'pyimage' and self.f1['image'] == 'pyimage3':
+                if self.g2['image'] == 'pyimage1' and self.f1['image'] == 'pyimage3':
                     self.ablef1 = True
                 else:
                     self.ablef1 = False
@@ -1991,7 +1992,7 @@ class Checkers(tk.Frame):
                     self.ableg4 = False
                 else:
                     self.ableg4 = True
-                if self.g4['image'] == 'pyimage' and self.f5['image'] == 'pyimage3':
+                if self.g4['image'] == 'pyimage1' and self.f5['image'] == 'pyimage3':
                     self.ablef5 = True
                 else:
                     self.ablef5 = False
@@ -2034,7 +2035,7 @@ class Checkers(tk.Frame):
                     self.ableg6 = False
                 else:
                     self.ableg6 = True
-                if self.g6['image'] == 'pyimage' and self.f7['image'] == 'pyimage3':
+                if self.g6['image'] == 'pyimage1' and self.f7['image'] == 'pyimage3':
                     self.ablef7 = True
                 else:
                     self.ablef7 = False
@@ -2042,7 +2043,7 @@ class Checkers(tk.Frame):
                     self.ableg4 = False
                 else:
                     self.ableg4 = True
-                if self.g4['image'] == 'pyimage' and self.f3['image'] == 'pyimage3':
+                if self.g4['image'] == 'pyimage1' and self.f3['image'] == 'pyimage3':
                     self.ablef3 = True
                 else:
                     self.ablef3 = False
@@ -2085,7 +2086,7 @@ class Checkers(tk.Frame):
                     self.ableg6 = False
                 else:
                     self.ableg6 = True
-                if self.g6['image'] == 'pyimage' and self.f5['image'] == 'pyimage3':
+                if self.g6['image'] == 'pyimage1' and self.f5['image'] == 'pyimage3':
                     self.ablef5 = True
                 else:
                     self.ablef5 = False
