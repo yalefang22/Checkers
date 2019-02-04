@@ -17,6 +17,8 @@ class Checkers(tk.Frame):
         self.redking = tk.PhotoImage(file='RedKing.png')
         self.blackking = tk.PhotoImage(file='BlackKing.png')
         self.purpleking = tk.PhotoImage(file='PurpleKing.png')
+        self.redpieces = 0
+        self.blackpieces = 0
 
 
         self.check = False
@@ -204,6 +206,7 @@ class Checkers(tk.Frame):
                 elif self.b3['image'] == 'pyimage1' and self.c4['image'] == 'pyimage4':
                     self.b3.configure(image=self.transparent)
                     self.c4.configure(image=self.transparent)
+                    self.redpiece -= 1
             self.piece = ''
             self.check = False
             self.clear()
@@ -1507,10 +1510,10 @@ class Checkers(tk.Frame):
                     self.ablee4 = False
                 else:
                     self.ablee4 = True
-                if self.e4['image'] == 'pyimage1' and self.d3['image'] == 'pyimage3':
-                    self.abled3 = True
+                if self.e4['image'] == 'pyimage1' and self.d5['image'] == 'pyimage3':
+                    self.abled5 = True
                 else:
-                    self.abled3 = False
+                    self.abled5 = False
                 if self.e2['image'] != 'pyimage3':
                     self.ablee2 = False
                 else:
@@ -2150,6 +2153,7 @@ class Checkers(tk.Frame):
         self.ableh3 = False
         self.ableh5 = False
         self.ableh7 = False
+
 
 
 root = tk.Tk()
