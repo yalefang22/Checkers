@@ -2162,15 +2162,15 @@ class Checkers(tk.Frame):
                     self.ablee4 = False
                 else:
                     self.ablee4 = True
-                if self.e4['image'] == 'pyimage1' or self.d3['image'] == 'pyimage3':
-                    self.abled3 = True
+                if self.e4['image'] == 'pyimage1' and self.d5['image'] == 'pyimage3':
+                    self.abled5 = True
                 else:
-                    self.abled3 = False
+                    self.abled5 = False
                 if self.e2['image'] != 'pyimage3':
                     self.ablee2 = False
                 else:
                     self.ablee2 = True
-                if self.e2['image'] == 'pyimage1' or self.d1['image'] == 'pyimage3':
+                if self.e2['image'] == 'pyimage1' and self.d1['image'] == 'pyimage3':
                     self.abled1 = True
                 else:
                     self.abled1 = False
