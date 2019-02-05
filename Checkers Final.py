@@ -2065,9 +2065,9 @@ class Checkers(tk.Frame):
             self.ablef1 = True
             if self.piece == 'red' or self.piece == 'redking' or self.piece == 'blackking':
                 if self.g2['image'] != 'pyimage3':
-                    self.ableg3 = False
+                    self.ableg2 = False
                 else:
-                    self.ableg3 = True
+                    self.ableg2 = True
                 if self.g2['image'] == 'pyimage2' and self.h3['image'] == 'pyimage3':
                     self.ableh3 = True
                 else:
@@ -2280,6 +2280,10 @@ class Checkers(tk.Frame):
                     self.ableh3 = True
                 else:
                     self.ableh3 = False
+                if self.e4['image'] == 'pyimage2' and self.d3['image'] == 'pyimage3':
+                    self.abled3 = True
+                else:
+                    self.abled3 = False
             if self.piece == 'black' or self.piece == 'redking' or self.piece == 'blackking':
                 if self.e6['image'] != 'pyimage3':
                     self.ablee6 = False
@@ -2724,7 +2728,7 @@ class Checkers(tk.Frame):
                     self.f7.configure(image=self.transparent)
                 elif self.e4['image'] == 'pyimage7':
                     self.e4.configure(image=self.transparent)
-                    self.f7.configure(image=self.transparent)
+                    self.f5.configure(image=self.transparent)
             elif self.piece == 'blackking':
                 self.g6.configure(image=self.blackking)
                 if self.f5['image'] == 'pyimage7':
@@ -2994,7 +2998,7 @@ class Checkers(tk.Frame):
                     self.g6.configure(image=self.transparent)
                 elif self.f3['image'] == 'pyimage7':
                     self.f3.configure(image=self.transparent)
-                    self.g6.configure(image=self.transparent)
+                    self.g4.configure(image=self.transparent)
             elif self.piece == 'blackking':
                 self.h5.configure(image=self.blackking)
                 if self.g6['image'] == 'pyimage7':
